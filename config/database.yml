@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  reconnect: true
+  pool: 10
+  username: postgres
+  password: 
+  host: db
+
+development:
+  <<: *default
+  database: site-casamento_development
+
+test:
+  <<: *default
+  database: site-casamento_test
+
+production:
+  <<: *default
