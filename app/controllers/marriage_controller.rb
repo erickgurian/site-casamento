@@ -6,6 +6,7 @@ class MarriageController < ApplicationController
   end
 
   def confirm_your_presence
+    @guest = Guest.new
   end
 
   def gifts_list

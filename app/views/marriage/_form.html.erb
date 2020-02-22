@@ -1,0 +1,70 @@
+<% @guest.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
+
+<form action="/guests" method="post" class="needs-validation" novalidate>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <div class="ls-label col-md-12">
+    <label for="name" class="col-sm-2 col-form-label">Nome</label>
+    <input type="text" class="form-control col-md-8" id="name" name= "guest[name]" placeholder="seu nome" required>
+  </div>
+
+  <div class="ls-label col-md-12">
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <input type="email" class="form-control col-md-8" id="email" name= "guest[email]" placeholder="exemplo@hotmail.com" required>
+  </div>
+
+  <div class="form-row align-items-center">
+    <div class="ls-label form-check form-check-inline">
+      <label for="question" class="form-check-label col-md-12">Vai ao casamento?</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" style="margin-bottom: 10px;" type="radio" name="guest[attend]" id="yes" value="true" required>
+      <label class="form-check-label" style="margin-bottom: 10px;" for="yes">Sim</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" style="margin-bottom: 10px;" type="radio" name="guest[attend]" id="no" value="false" required>
+      <label class="form-check-label" style="margin-bottom: 10px;"for="yes">Não</label>
+    </div>
+  </div>
+
+  <div class="ls-label col-md-12">
+    <label for="subject" class="col-sm-2 col-form-label">Assunto</label>
+    <input type="text" class="form-control col-md-8" id="subject" name= "guest[subject]" placeholder="">
+  </div>
+
+  <div class="ls-label col-md-12">
+    <label for="comment" class="col-sm-2 col-form-label">Texto</label>
+    <textarea class="form-control col-md-8" id="comment" name= "guest[comment]" rows="5"></textarea>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </div>
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>

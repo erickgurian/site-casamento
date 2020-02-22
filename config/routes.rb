@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     get :fornecedores, action: 'providers'
     get :nao_peguei_o_buque, action: 'the_bouquet'
   end
+
+  resources :guests, only: %i[create]
 end

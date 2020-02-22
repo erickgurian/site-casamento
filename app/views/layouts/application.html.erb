@@ -16,13 +16,18 @@
       
       <div class="header-border">
         <h1 class="title">Camila e Erick</h1>
-        <h2 class="sub-title"> contagem regressiva </h2>
         <h3 class="sub-title"> 07 de Novembro de 2020</h3>
       </div>
 
       <%= render 'shared/navbar' %>
       <br>
       <div class="container body-content">
+      <% if notice.present? %>
+        <div class="alert alert-success"><%= notice %></div>
+      <% end %>
+      <% if alert.present? %>
+        <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
         <%= yield %>
       </div>
     </div>
