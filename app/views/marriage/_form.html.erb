@@ -1,7 +1,3 @@
-<% @guest.errors.full_messages.each do |message| %>
-  <p><%= message %></p>
-<% end %>
-
 <form action="/guests" method="post" class="needs-validation" novalidate>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 

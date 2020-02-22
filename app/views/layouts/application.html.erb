@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Simonetta&display=swap" rel="stylesheet">
     <title>GuriMila</title>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,19 +18,22 @@
       <div class="header-border">
         <h1 class="title">Camila e Erick</h1>
         <h3 class="sub-title"> 07 de Novembro de 2020</h3>
+        <% if user_signed_in? %>
+          <h6 style="text-align: center;">Logado como <%= current_user.email %></h6>
+        <% end %>
       </div>
 
       <%= render 'shared/navbar' %>
       <br>
-      <div class="container body-content">
-      <% if notice.present? %>
-        <div class="alert alert-success"><%= notice %></div>
-      <% end %>
-      <% if alert.present? %>
-        <div class="alert alert-danger"><%= alert %></div>
-      <% end %>
+      <nav class="container body-content">
+        <% if notice.present? %>
+          <div class="alert alert-success"><%= notice %></div>
+        <% end %>
+        <% if alert.present? %>
+          <div class="alert alert-danger"><%= alert %></div>
+        <% end %>
         <%= yield %>
-      </div>
+      </nav>
     </div>
   </body>
 </html>

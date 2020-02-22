@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   end
 
   resources :guests, only: %i[create]
+
+  resources :users, only: %i[index]
 end

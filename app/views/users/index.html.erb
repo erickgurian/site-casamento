@@ -1,0 +1,29 @@
+<h1 class="ls-title-intro ls-ico-home">Bem Vindo, <%= current_user.email %></h1>
+
+<div class="ls-box">
+  <% if @guests.any? %>
+  <h4>Convidados</h4>
+    <table class="ls-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Presença</th>
+          <th class="hidden-xs">Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @guests.each do |guest| %>
+          <tr>
+            <td><%= guest.name %></td>
+            <td><%= guest.email %></td>
+            <td><%= guest.attend ? 'Sim' : 'Não' %></td>
+            <td><%= link_to 'Detalhes', class: 'ls-btn' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+  <p>Não há presenças confirmadas</p>
+  <% end %>
+</div>

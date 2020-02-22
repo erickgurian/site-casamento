@@ -1,3 +1,3 @@
 class Guest < ApplicationRecord
-  validates :name, :email, :attend, :subject, :comment, presence: true
+  validates :name, :email, :attend, presence: true
 end
