@@ -20,11 +20,13 @@ pre {
   height: auto;
   text-align: justify;
   overflow: hidden;
-  word-break: normal;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
+  /* word-break: normal; */
+  /* word-wrap: break-word; */
+  white-space: pre-line;
+  font-family: 'Arima Madurai';
+  font-size: 20px;
+  color: #020a2c;
+  /* max-width: 102%; */
 }
 
 .jumbotron {
@@ -64,7 +66,7 @@ footer {
 }
 
 .background{
-  background-image: url('fundolg22.png');
+  background-image: url('background.png');
   background-repeat: repeat-y;
   bottom: 0;
   left: 0;
@@ -79,24 +81,27 @@ footer {
 .title{
   text-align: center;
   position: relative;
-  font-family: 'Rouge Script';
+  //font-family: 'Rouge Script';
+  font-family: 'Alex Brush';
   font-size: 100px;
-  color: black;
+  //color: black;
+  color: #1D3A77;
 }
 
 .sub-title{
   text-align: center;
   position: relative;
-  font-family: 'Simonetta';
+  font-family: 'Amaranth';
   font-size: 20px;
-  color: black;
+  // color: black;
+  color: rgb(2, 10, 44);
   padding: 10px;
 }
 
 .body-content{
   top: 10px;
   text-align: center;
-  max-width: 81%;
+  max-width: 73%;
   position: relative;
 }
 
@@ -112,17 +117,20 @@ footer {
 }
 
 .navbar {
-  width: 79%;
+  width: 72%;
   margin: 10px auto;
   border-radius: 5px;
   // border: 1px solid rgba(40, 193, 218, 0.55);
-  background-color: rgba(46, 215, 243, 0.16);
+   background-color: rgba(12, 203, 236, 0.16);
+ // background-color: #41BABA;
 }
 
 .nav-item.nav-link.custom{
-  color: black;
+  //color: black;
+  color: rgb(2, 10, 44);
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
+  font-family: 'Arima Madurai';
 }
 
 .navbar-toggler.custom{
@@ -130,7 +138,7 @@ footer {
 }
 
 .body-border{
-  border: 1px solid rgb(252, 133, 54);
+  border: 1px solid #F18724;
   border-radius: 5px;
   padding: 20px;
 }
@@ -144,11 +152,14 @@ footer {
   margin-top: 1%;
 }
 .camila-font{
-  color: rgb(27, 134, 235);
+  font-family: 'Amaranth';
+  //color: rgb(27, 134, 235);
+  color: rgba(49, 197, 223, 0.973);
 }
 
 .erick-font{
-  color: orange;
+  font-family: 'Amaranth';
+  color: #F18724;
 }
 
 .center-div{
@@ -157,3 +168,16 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.text-title{
+  font-family: 'Amaranth';
+  color: #1D3A77;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-sub-title{
+  font-weight: bold;
+  text-align: center;
+}
+

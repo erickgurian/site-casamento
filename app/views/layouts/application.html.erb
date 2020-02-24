@@ -2,6 +2,9 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Simonetta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
     <title>GuriMila</title>
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= csrf_meta_tags %>
@@ -18,6 +21,14 @@
       <div class="header-border">
         <h1 class="title">Camila e Erick</h1>
         <h3 class="sub-title"> 07 de Novembro de 2020</h3>
+        
+        <div class="center-div sub-title">
+          <div id="dia"></div>&nbsp;
+          <div id="hora"></div>&nbsp;
+          <div id="minuto"></div>&nbsp;
+          <div id="segundo"></div>&nbsp;
+        </div>
+        
         <% if user_signed_in? %>
           <h6 style="text-align: center;">Logado como <%= current_user.email %></h6>
         <% end %>
