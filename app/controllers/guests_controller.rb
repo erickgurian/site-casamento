@@ -9,6 +9,11 @@ class GuestsController < ApplicationController
     end
   end
 
+  def show
+    @guest = Guest.find(params[:id])
+    render layout: 'panel'
+  end
+
   private
 
   def guest_params

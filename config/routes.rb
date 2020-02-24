@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get :nao_peguei_o_buque, action: 'the_bouquet'
   end
 
-  resources :guests, only: %i[create]
+  resources :guests, only: %i[create show]
 
   resources :users, only: %i[index]
 end

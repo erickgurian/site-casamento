@@ -18,7 +18,7 @@
             <td><%= guest.name %></td>
             <td><%= guest.email %></td>
             <td><%= guest.attend ? 'Sim' : 'Não' %></td>
-            <td><%= link_to 'Detalhes', class: 'ls-btn' %></td>
+            <td><%= link_to 'Detalhes', guest, class: 'ls-btn' %></td>
           </tr>
         <% end %>
       </tbody>
