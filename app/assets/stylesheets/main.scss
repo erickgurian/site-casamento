@@ -7,6 +7,15 @@
   src: local('Rouge Script'), local('RougeScript-Regular'), url(http://themes.googleusercontent.com/static/fonts/rougescript/v2/AgXDSqZJmy12qS0ixjs6V4nF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
 }
 
+a:hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+a{
+  color: inherit;
+}
+
 pre {
   height: auto;
   text-align: justify;
@@ -16,8 +25,6 @@ pre {
   white-space: pre-wrap;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
-  list-style: none;
-  cursor: pointer;
 }
 
 .jumbotron {
@@ -142,4 +149,11 @@ footer {
 
 .erick-font{
   color: orange;
+}
+
+.center-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

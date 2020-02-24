@@ -2,8 +2,8 @@
   <button class="navbar-toggler custom" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+  <div class="collapse navbar-collapse center-div" id="navbarNavAltMarkup">
+    <div class="nav navbar-nav">
       <%= link_to 'Bem Vindos', root_path, class: 'nav-item nav-link custom' %>
       <%= link_to 'O casamento', o_casamento_path, class: 'nav-item nav-link custom' %>
       <%= link_to 'Confirme sua presença', confirme_sua_presenca_path, class: 'nav-item nav-link custom' %>
@@ -12,9 +12,7 @@
       <%= link_to 'Nossas memórias', nossas_memorias_path, class: 'nav-item nav-link custom' %>
       <%= link_to 'O que vestir', o_que_vestir_path, class: 'nav-item nav-link custom' %>
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to 'Painel do Usuário', users_path, class: 'nav-item nav-link custom' %>
-        </li>
+        <%= link_to 'Painel do Usuário', users_path, class: 'nav-item nav-link custom' %>
       <% end %>
     </div>
   </div>

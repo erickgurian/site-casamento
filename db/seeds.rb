@@ -1,1 +1,1 @@
-User.create(email: 'admin@teste.com', password: 'segredo')
+User.create(email: 'erick_gurian@hotmail.com', password: 'segredo')
