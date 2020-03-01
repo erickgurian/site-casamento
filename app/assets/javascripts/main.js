@@ -1,5 +1,6 @@
 (function() {
-  var target_date = new Date("november 07, 2020").getTime();
+  var date = new Date("november 07, 2020");
+  var target_date = new Date(date.valueOf() - date.getTimezoneOffset() * 60000)
   var days, hours, minutes, seconds;
 
   setInterval(function () {
