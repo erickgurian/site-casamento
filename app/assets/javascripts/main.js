@@ -1,5 +1,5 @@
 (function() {
-  var date = new Date("november 07, 2020");
+  var date = new Date("october 03, 2021");
   var target_date = new Date(date.valueOf() - date.getTimezoneOffset() * 60000)
   var days, hours, minutes, seconds;
 
